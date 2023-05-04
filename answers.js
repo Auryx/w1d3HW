@@ -15,7 +15,14 @@ for (let i = 0; i < 201; i+=2){
 ////////////////////////////////
 // Fizz Buzz
 ////////////////////////////////
+for (let i = 1; i < 101; i++){
+    let fizzBuzz = ""
+    if (i % 3 == 0) {fizzBuzz += "Fizz"}
+    if (i % 5 == 0) {fizzBuzz += "Buzz"}
 
+    if (fizzBuzz == "") {fizzBuzz = i}
+    console.log(fizzBuzz)
+}
 
 ////////////////////////////////
 // Wild Wild Life
