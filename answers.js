@@ -82,14 +82,20 @@ console.log(findMovieIndex("Volver")) //Volver was removed, not Fast and Furious
 const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
                       ["Lucinda", "Jacc", "Neff", "Snoop"],
                       ["Petunia", ["Baked Goods", "Waldo"]]];
-console.log(whereIsWaldo.splice(1, 1))
+whereIsWaldo.splice(1, 1)
 console.log(whereIsWaldo[1][2] = "No One")
 console.log(whereIsWaldo[2][1][1])
 
 ////////////////////////////////
 //  Excited Kitten
 ////////////////////////////////
-
+for (let i=1; i <= 20; i++){
+    let kitTalk = ""
+    const kitLines = ["...human...why you taking pictures of me?...", "...the catnip made me do it...", "...why does the red dot always get away..."]
+    if (i % 2 == 0) {kitTalk = kitLines[(Math.floor(Math.random() * 3))]}
+    else {kitTalk = "Love me, pet me! HSSSSSS!"}
+    console.log(kitTalk)
+}
 
 ////////////////////////////////
 //  Find the Median
