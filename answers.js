@@ -53,8 +53,30 @@ for (let turtle of ninjaTurtles) {
 ////////////////////////////////
 // Methods, Revisited
 ////////////////////////////////
+console.log("Methods, Revisited")
 
-
+const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
+const findMovieIndex = (x) => {
+    for (let i=0; i < favMovies.length+1; i++) {
+        if (favMovies[i] == x){
+            console.log(i)
+            return i
+        }
+    }
+}
+findMovieIndex("Titanic")
+favMovies.sort() //Alphabetical order, permanent alter
+favMovies.pop()
+favMovies.push("Guardians of the Galaxy")
+favMovies.reverse()
+favMovies.shift()
+favMovies.unshift() // returns the array length
+favMovies.splice(findMovieIndex("Django Unchained"), 1, "Avatar")
+let halfFavMovies = favMovies.slice((favMovies.length + 1)/ 2)
+console.log(halfFavMovies)
+console.log(favMovies)
+console.log(findMovieIndex("Volver")) //Volver was removed, not Fast and Furious. It returns undefined
+// You use const to declare an array to avoid accidentally removing the array by redeclaring it
 ////////////////////////////////
 // Where is Waldo
 ////////////////////////////////
