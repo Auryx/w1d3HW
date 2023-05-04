@@ -100,5 +100,18 @@ for (let i=1; i <= 20; i++){
 ////////////////////////////////
 //  Find the Median
 ////////////////////////////////
-
-
+const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+const findArrayMedian = (x) => {
+    let median = 0
+    x.sort(function(a, b){return a - b})
+    let arrayHalfPoint = Math.floor(x.length /2)
+    if (x[arrayHalfPoint] !== x[arrayHalfPoint + 1]) {
+        median = (x[arrayHalfPoint] + x[arrayHalfPoint+1]) / 2
+    } else {
+        median = x[arrayHalfPoint]
+    }
+    return median
+}
+console.log(findArrayMedian(nums))
+// Expected output:
+// => 15
