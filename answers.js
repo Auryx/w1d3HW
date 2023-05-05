@@ -1,6 +1,7 @@
 ////////////////////////////////
 // Easy Going
 ////////////////////////////////
+console.log("<<<<<<<<<<<<<<<<<<<<<<<<<< Easy Going >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 for (let i = 0; i < 20; i++){
     console.log(i+1)
 }
@@ -8,6 +9,7 @@ for (let i = 0; i < 20; i++){
 ////////////////////////////////
 // Get Even
 ////////////////////////////////
+console.log("<<<<<<<<<<<<<<<<<<<<<<<<<< Get Even >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 for (let i = 0; i < 201; i+=2){
     console.log(i)
 }
@@ -15,6 +17,7 @@ for (let i = 0; i < 201; i+=2){
 ////////////////////////////////
 // Fizz Buzz
 ////////////////////////////////
+console.log("<<<<<<<<<<<<<<<<<<<<<<<<<< Fizz Buzz >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 for (let i = 1; i < 101; i++){
     let fizzBuzz = ""
     if (i % 3 == 0) {fizzBuzz += "Fizz"}
@@ -27,6 +30,7 @@ for (let i = 1; i < 101; i++){
 ////////////////////////////////
 // Wild Wild Life
 ////////////////////////////////
+console.log("<<<<<<<<<<<<<<<<<<<<<<<<<< Wild Wild Life >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 const wolfy = ["Wolfy", "wolf", 16, "Yukon Territory"]
 const sharky = ["Sharky", "shark", 20, "Left Coast"]
 const plantee = ["Plantee", "plant",  5000 , "Mordor"]
@@ -45,6 +49,7 @@ console.log(wolfy[0])
 ////////////////////////////////
 // Yell at the Ninja Turtles
 ////////////////////////////////
+console.log("<<<<<<<<<<<<<<<<<<<<<<<<<< Yell at the Ninja Turtles >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 const ninjaTurtles = ["Donatello", "Leonardo", "Raphael", "Michaelangelo"]
 for (let turtle of ninjaTurtles) {
     console.log(turtle.toUpperCase())
@@ -53,42 +58,47 @@ for (let turtle of ninjaTurtles) {
 ////////////////////////////////
 // Methods, Revisited
 ////////////////////////////////
+console.log("<<<<<<<<<<<<<<<<<<<<<<<<<< Methods, Revisited >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
 const findMovieIndex = (x) => {
     for (let i=0; i < favMovies.length+1; i++) {
         if (favMovies[i] == x){
-            console.log(i)
             return i
         }
     }
 }
-findMovieIndex("Titanic")
-favMovies.sort() //Alphabetical order, permanent alter
-favMovies.pop()
-favMovies.push("Guardians of the Galaxy")
-favMovies.reverse()
+console.log(findMovieIndex("Titanic"), "<< expect 8")
+favMovies.sort() // Alphabetical order, permanent alter
+favMovies.pop()  // Removed Volver
+favMovies.push("Guardians of the Galaxy") // Added Guardians to the front of favMovies 
+favMovies.reverse() // Reversed array
 favMovies.shift()
 favMovies.unshift() // returns the array length
 favMovies.splice(findMovieIndex("Django Unchained"), 1, "Avatar")
-let halfFavMovies = favMovies.slice((favMovies.length + 1)/ 2)
-console.log(halfFavMovies)
+let halfFavMovies = favMovies.slice(0, (favMovies.length + 1)/ 2)
+console.log(halfFavMovies, "<< expect first half of array")
 console.log(favMovies)
-console.log(findMovieIndex("Volver")) //Volver was removed, not Fast and Furious. It returns undefined
+console.log(findMovieIndex("Volver"), "<< expect undefined") //Volver was removed with pop(), not Fast and Furious. It returns undefined
 // You use const to declare an array to avoid accidentally removing the array by redeclaring it
 
 ////////////////////////////////
 // Where is Waldo
 ////////////////////////////////
+console.log("<<<<<<<<<<<<<<<<<<<<<<<<<< Where is Waldo >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 const whereIsWaldo = [["Timmy", "Frank"], "Eggbert",
                       ["Lucinda", "Jacc", "Neff", "Snoop"],
                       ["Petunia", ["Baked Goods", "Waldo"]]];
-whereIsWaldo.splice(1, 1)
-console.log(whereIsWaldo[1][2] = "No One")
-console.log(whereIsWaldo[2][1][1])
+
+console.log(whereIsWaldo.splice(1, 1), "<< expect [ 'Eggbert' ]")
+
+console.log((whereIsWaldo[1][2] = "No One"), "<< expect No One")
+
+console.log(whereIsWaldo[2][1][1], "<< expect Waldo")
 
 ////////////////////////////////
 //  Excited Kitten
 ////////////////////////////////
+console.log("<<<<<<<<<<<<<<<<<<<<<<<<<< Excited Kitten >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 for (let i=1; i <= 20; i++){
     let kitTalk = ""
     const kitLines = ["...human...why you taking pictures of me?...", "...the catnip made me do it...", "...why does the red dot always get away..."]
@@ -100,6 +110,7 @@ for (let i=1; i <= 20; i++){
 ////////////////////////////////
 //  Find the Median
 ////////////////////////////////
+console.log("<<<<<<<<<<<<<<<<<<<<<<<<<< Find the Median >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
 const findArrayMedian = (x) => {
     let median = 0
@@ -112,6 +123,6 @@ const findArrayMedian = (x) => {
     }
     return median
 }
-console.log(findArrayMedian(nums))
+console.log(findArrayMedian(nums), "<< expect 15")
 // Expected output:
 // => 15
