@@ -60,25 +60,25 @@ for (let turtle of ninjaTurtles) {
 ////////////////////////////////
 console.log("<<<<<<<<<<<<<<<<<<<<<<<<<< Methods, Revisited >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 const favMovies = ['Jaws', 'The Fellowship of the Ring', 'Howl\'s Moving Castle', 'Django Unchained', 'Cloud Atlas', 'The Usual Suspects', 'Toy Story', 'Conan the Barbarian', 'Titanic', 'Harry Potter', 'Fried Green Tomatoes', 'Volver', 'Oculus', 'Seven', 'Black Panther', 'Harry Potter', 'Imitation of Life', 'Snatch', 'Fast and Furious'];
-const findMovieIndex = (x) => {
-    for (let i=0; i < favMovies.length+1; i++) {
-        if (favMovies[i] == x){
+const findMovieIndex = (x, y) => {
+    for (let i=0; i < y.length+1; i++) {
+        if (y[i] == x){
             return i
         }
     }
 }
-console.log(findMovieIndex("Titanic"), "<< expect 8")
+console.log(findMovieIndex("Titanic", favMovies), "<< expect 8")
 favMovies.sort() // Alphabetical order, permanent alter
 favMovies.pop()  // Removed Volver
 favMovies.push("Guardians of the Galaxy") // Added Guardians to the front of favMovies 
 favMovies.reverse() // Reversed array
 favMovies.shift()
 favMovies.unshift() // returns the array length
-favMovies.splice(findMovieIndex("Django Unchained"), 1, "Avatar")
+favMovies.splice(findMovieIndex("Django Unchained", favMovies), 1, "Avatar")
 let halfFavMovies = favMovies.slice(0, (favMovies.length + 1)/ 2)
 console.log(halfFavMovies, "<< expect first half of array")
 console.log(favMovies)
-console.log(findMovieIndex("Volver"), "<< expect undefined") //Volver was removed with pop(), not Fast and Furious. It returns undefined
+console.log(findMovieIndex("Fast and Furious", halfFavMovies), "<< expect undefined") 
 // You use const to declare an array to avoid accidentally removing the array by redeclaring it
 
 ////////////////////////////////
